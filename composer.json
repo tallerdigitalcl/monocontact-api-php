@@ -1,0 +1,15 @@
+{
+    "name": "pablo/composer",
+    "authors": [
+        {
+            "name": "pabluwu",
+            "email": "lopez.pablo2305@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "mono\\": "src"
+        }
+    },
+    "require": {}
+}
