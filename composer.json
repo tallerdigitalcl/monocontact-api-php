@@ -2,10 +2,11 @@
     "name": "monocontact/api-connector",
     "authors": [
         {
-            "name": "pabluwu",
+            "name": "Pablo López",
             "email": "lopez.pablo2305@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "mono\\": "src"
