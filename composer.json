@@ -1,5 +1,6 @@
 {
     "name": "monocontact/api-connector",
+    "description": "Api connector for monocontact",
     "authors": [
         {
             "name": "Pablo López",
@@ -12,5 +13,7 @@
             "mono\\": "src"
         }
     },
-    "require": {}
+    "require": {
+        "php": ">=7.4"
+    }
 }
