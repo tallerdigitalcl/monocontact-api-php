@@ -44,7 +44,10 @@ class Monocontact{
 			curl_setopt($this->curl, CURLOPT_HTTPGET, TRUE);
 		} elseif ($method == 'post') {
 			curl_setopt($this->curl, CURLOPT_POSTFIELDS, json_encode($params, JSON_PRETTY_PRINT));
-		}        
+		} elseif ($method == 'delete') {
+			curl_setopt($this->curl, CURLOPT_POSTFIELDS, json_encode($params, JSON_PRETTY_PRINT));
+			curl_setopt($this->curl, CURLOPT_CUSTOMREQUEST, 'DELETE');
+		}   
 		// echo json_encode($params, JSON_PRETTY_PRINT);
 		$now = DateTime::createFromFormat('U.u', microtime(true));
 		$local = $now->setTimeZone(new DateTimeZone('America/Santiago'));
