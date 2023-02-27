@@ -13,7 +13,7 @@ class MonoModel {
 	public function listing() {
 		if (!$this->model) throw new \Exception('You must enter a model');;
 		$_params = ['model'=>$this->model];
-		$url = $this->model.'/list';
+		$url = $this->model;
 		return $this->master->call($url, $_params, 'get');
 	}
 
@@ -34,8 +34,10 @@ class MonoModel {
 		if (!$this->model) throw new \Exception('You must enter a model');;
 		$_params = $columns;
 		print_r ($_params);
-		$url = $this->model.'/create';
+		$url = $this->model;
 		return $this->master->call($url, $_params, 'post');
 	}
+
+	
 
 }

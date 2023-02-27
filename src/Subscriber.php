@@ -2,6 +2,7 @@
 
 namespace mono;
 
+//No Longer Works
 class Subscriber extends MonoModel {
 
 	protected $model = 'subscriber';
@@ -21,21 +22,4 @@ class Subscriber extends MonoModel {
 		$url = $this->model.'/multiple/with-list';
 		return $this->master->call($url, $_params, 'post');
 	}
-
-	public function subscriberCreate($columns){
-		if (!$this->model) throw new \Exception('You must enter a model');;
-		$_params = $columns;
-		// print_r ($_params);
-		$url = $this->model.'/';
-		return $this->master->call($url, $_params, 'post');
-	}
-	
-	public function deleteSubscriber($columns){
-		if (!$this->model) throw new \Exception('You must enter a model');;
-		$_params = $columns;
-		// print_r ($_params);
-		$url = $this->model.'/';
-		return $this->master->call($url, $_params, 'delete');
-	}
-
 }

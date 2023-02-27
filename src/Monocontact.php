@@ -34,6 +34,7 @@ class Monocontact{
 		$this->listing = new Listing($this);
 		$this->contact = new Contacto($this);
 		$this->subscriber = new Subscriber($this);
+		$this->custom_field = new CustomField($this);
 
 		$this->apiurl = rtrim($this->apiurl, '/') . '/';
 	}
