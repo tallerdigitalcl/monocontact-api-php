@@ -6,7 +6,7 @@ use mono\Monocontact;
 
 $apiurl = 'http://127.0.0.1:8000/v1.1/';
 
-$m = new Monocontact('t-MduXc11yE5IHD4a5cVt8x4aaG', 's-XxCyXLQFaT58DTSfyZrCCGwg3wIY8USJcnf59NQ7fBjcQmWBRUnNXeWejRkZFRmQH', $apiurl);
+$m = new Monocontact('token', 'secret-token', $apiurl);
 
 // CUSTOM FIELDS
 
