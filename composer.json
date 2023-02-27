@@ -15,5 +15,6 @@
     },
     "require": {
         "php": ">=7.4"
-    }
+    },
+    "license": "GPL-3.0-only"
 }
