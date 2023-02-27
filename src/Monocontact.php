@@ -32,8 +32,7 @@ class Monocontact{
 		curl_setopt($this->curl, CURLOPT_TIMEOUT, 600);*/
 
 		$this->listing = new Listing($this);
-		$this->contact = new Contacto($this);
-		$this->subscriber = new Subscriber($this);
+		$this->contact = new Contact($this);		
 		$this->custom_field = new CustomField($this);
 
 		$this->apiurl = rtrim($this->apiurl, '/') . '/';
@@ -71,9 +70,10 @@ class Monocontact{
 			"Stamp: $stamp"
 		]);
 		$server_output = curl_exec($this->curl);
-		// print_r($this->curl);
+		print_r(curl_getinfo($this->curl, CURLINFO_HTTP_CODE));
 
 		if (curl_getinfo($this->curl, CURLINFO_HTTP_CODE)!='200') {
+			print_r(curl_getinfo($this->curl, CURLINFO_HTTP_CODE));
 			throw new \Exception($server_output);
 		}
 

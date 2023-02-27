@@ -24,12 +24,6 @@ class MonoModel {
 		return $this->master->call($url, $_params, 'get');
 	}
 
-	public function find($columns) {
-		if (!$this->model) throw new \Exception('You must enter a model');;
-		$_params = ['model'=>$this->model, 'columns'=>$columns];
-		return $this->master->call('find', $_params);
-	}
-
 	public function create($columns) {
 		if (!$this->model) throw new \Exception('You must enter a model');;
 		$_params = $columns;
