@@ -29,7 +29,7 @@ class Listing extends MonoModel {
 
 	public function searchList($name){
 		if (!$this->model) throw new \Exception('You must enter a model');;
-		$_params = ['name'=>'lista nueva febrero'];
+		$_params = ['name'=>$name];
 		$url = 'listing/search/';
 		return $this->master->call($url, $_params, 'post');
 	}
